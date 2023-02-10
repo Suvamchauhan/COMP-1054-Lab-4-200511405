@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: content-box;
+}
+
+
+/* STEP 5: Base typography */
+body {
+	font: 150%/1.4 Helvetica, Arial, sans-serif;
+	/* outline: 3px solid black;
+	width: 600px; */
+}
+
+/* STEP 6: Outline all elements to be arranged in layout */
+div#container {
+	outline: 3px dashed green;
+/* STEP 7: Set the width and the margins of the page container */
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* STEP 10: Layer positioned elements with z-index */
+header {
+	outline: 3px dashed red;
+	background-color: lightblue;
+	padding: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+}
+/* Escaping margin bug */
+h1 {
+	margin: 5px;
+}
+main {
+	outline: 3px dashed blue;
+	/* STEP 8e: Set a float to clear a float */
+	float: left;
+	margin-top: 135px;
+}
+
+section {
+	/* outline: 3px dashed orange; */
+	padding: 20px;
+	border: 10px solid yellow;
+	/* STEP 8a: Set the width of the <section> and the <aside> columns */
+	width: 600px;
+	/* STEP 8b: Float the 2 columns right and left */
+	float: right;
+	/* STEP 8c: Break the float, and experiment with border-box sizing at top of CSS file */
+
+	/* STEP 8f: Experiment with inline-block to arrange the 2 columns inside the <main> */
+	/* display: inline-block; */
+}
+
+section {
+		/* outline: 3px dashed orange; */
+		padding: 20px;
+		border: 10px solid yellow;
+		/* STEP 8a: Set the width of the <section> and the <aside> columns */
+		width: 600px;
+		/* STEP 8b: Float the 2 columns right and left */
+		float: right;
+		margin: 10px;
+}
+
+aside {
+	/* outline: 3px dashed hotpink; */
+	width: 300px;
+	padding: 20px;
+	border: 10px solid lightblue;
+	float: left;
+	/* display: inline-block; */
+	/* STEP 8g: vertically align the <aside> column */
+	/* vertical-align: top; */
+	/* position: sticky;
+	top: 0; */
+}
+
+footer {
+	outline: 3px dashed limegreen;
+	/* STEP 8d: Clear the footer, noticing that the <main> element is collapsed */
+	clear: both;
+	position: fixed;
+	bottom: 3px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 40%;
+
+}
+/* STEP 11: Control visibility and display properties */
+main p img {
+	visibility: hidden;
+	display: none;
+}
+/* STEP 9: Absolute and fixed positioning */
+p.social {
+
+	font-family: socialicoregular;
+	font-size: 60px;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	height: 100px;
+	width: 250px;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	right: 10px;
+	top: 90px;
+	margin: 0;
+	z-index: 10;
+}
